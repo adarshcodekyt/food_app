@@ -1,0 +1,41 @@
+
+
+
+<div class="col-md-4 col-md-offset-2">
+<div class="text-center">
+
+<%=link_to"Add Menu Item",new_menu_item_path,class: "btn btn-info btn-md"%>
+</div>
+
+<%@menu_items.each do |menu_item|%>
+<div class="col-md-12">
+<div class="panel panel-default"> 
+<ol>
+<li><%=menu_item.item_name%></li>
+<li><%=menu_item.item_price%></li>
+<li><%=menu_item.image_id%></li>
+<li><%=menu_item.special_category_id%></li>
+<li><%=menu_item.spicy_level%></li>
+<li><%=menu_item.offer_id%></li>
+<li><%=menu_item.item_description%></li>
+<li><%=menu_item.item_ingredients%></li>
+<li><%=menu_item.item_active%></li>
+<li><%=menu_item.preparation_time%></li>
+<li><%=menu_item.meal_type_id%></li>
+<div class="text-center">
+  <td><%= link_to 'Show', menu_item,class: "btn btn-default"%></td>
+   <td><%= link_to 'Edit', edit_menu_item_path(menu_item),class: "btn btn-default"%></td>
+   <td><%= link_to 'Destroy', menu_item, method: :delete, data: { confirm: 'Are you sure?' },class: "btn btn-default"%></td>
+   </div>
+   </div>
+   </div>
+
+<%end%>
+
+</div>
+
+
+
+
+
+

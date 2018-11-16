@@ -1,0 +1,24 @@
+<div class="col-md-4">
+<div class="text-center">
+ <%=link_to"Add menu images",new_menu_image_path,class: "btn btn-info btn-md"%>
+</div>
+
+
+ <%@menuimages.each do |page|%>
+ <div class="col-md-12">
+<div class="panel panel-default"> 
+<div class="text-center">
+  <%=image_tag page.menuimage.url(:thumb),:size => "150x150", :crop => :fill%>
+  <li><%=page.name%></li>
+  <li><%=page.title%></li>
+  
+  <div class="text-center">
+    <td><%= link_to 'Show', page,class: "btn btn-default"%></td>
+   <td><%= link_to 'Edit', edit_menu_image_path(page),class: "btn btn-default"%></td>
+   <td><%= link_to 'Destroy', page, method: :delete, data: { confirm: 'Are you sure?' },class: "btn btn-default"%></td>
+  </div>
+  </div>
+ </div>
+ </div>
+  <%end%>
+</div>

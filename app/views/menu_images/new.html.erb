@@ -1,0 +1,8 @@
+<div class="col-sm-6 ">
+  <%=bootstrap_form_for @menuimage, url: menu_images_path, html: { multipart: true } do |form| %>
+  <%= form.file_field :menuimage %>
+  <%= form.text_field :name%>
+  <%= form.text_field :title%>
+  <%= form.submit %>
+  <% end %>
+  </div>
