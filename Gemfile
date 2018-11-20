@@ -32,7 +32,7 @@ gem 'bootstrap-sass', '~> 3.3.7'
 gem 'jquery-rails'
 gem 'geocoder'
 gem "paperclip", "~> 6.0.0"
-
+gem 'rails_12factor'
 # Use ActiveStorage
 # gem 'mini_magick', '~> 4.8'
 
